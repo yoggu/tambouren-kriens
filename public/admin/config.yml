@@ -5,7 +5,7 @@ media_folder: public/img #images that are uploaded via Netlify Cms interface wil
 public_folder: img #I dont know
 collections:
   - name: "event" # Used in routes, e.g., /admin/collections/blog
-    label: "BlogPost" # Used in the UI
+    label: "Event" # Used in the UI
     folder: "content/events" # The path to the folder where the markdown files are stored
     create: true # Allow users to create new markdown files.
     slug: "{{year}}-{{month}}-{{day}}-{{event}}" # Filename template, e.g., YYYY-MM-DD-title.md
