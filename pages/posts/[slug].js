@@ -5,7 +5,7 @@ import matter from "gray-matter";
 import Head from "next/head";
 import marked from "marked";
 
-const Event = ({ data, content }) => {
+const Post = ({ data, content }) => {
   return (
     <>
       <Head>
@@ -17,11 +17,11 @@ const Event = ({ data, content }) => {
 };
 
 export const getStaticPaths = async () => {
-  const files = fs.readdirSync("content/events");
+  const files = fs.readdirSync("content/posts");
   console.log(files);
   const paths = files.map((filename) => ({
     params: {
-      event: filename.replace(".md", ""),
+      slug: filename.replace(".md", ""),
     },
   }));
   console.log(paths);
@@ -32,9 +32,9 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params: { event } }) => {
+export const getStaticProps = async ({ params: { slug } }) => {
   const mdWithMetadata = fs.readFileSync(
-    path.join("content", "events", `${event}.md`),
+    path.join("content", "posts", `${slug}.md`),
     "utf-8"
   );
 
@@ -48,4 +48,4 @@ export const getStaticProps = async ({ params: { event } }) => {
   };
 };
 
-export default Event;
+export default Post;

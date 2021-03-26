@@ -4,15 +4,34 @@ backend:
 media_folder: public/img #images that are uploaded via Netlify Cms interface will be stored in this folder
 public_folder: img #I dont know
 collections:
-  - name: "event" # Used in routes, e.g., /admin/collections/blog
-    label: "Event" # Used in the UI
-    folder: "content/events" # The path to the folder where the markdown files are stored
+  - name: "post" # Used in routes, e.g., /admin/collections/blog
+    label: "Beitrag" # Used in the UI
+    folder: "content/posts" # The path to the folder where the markdown files are stored
     create: true # Allow users to create new markdown files.
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{slug}}" # Filename template, e.g., title.md
     fields: # The fields for front matter. You will need to modify fields according to your project.
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Download", name: "download", widget: "string" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Teaser Text", name: "teaser", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime" }
+      - { label: "Bild", name: "thumbnail", widget: "image" }
       - { label: "Author", name: "author", widget: "string", default: "Admin" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "events" # Used in routes, e.g., /admin/collections/blog
+    label: "Events" # Used in the UI
+    folder: "content/events" # The path to the folder where the markdown files are stored
+    create: true # Allow users to create new markdown files.
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields: # The fields for front matter. You will need to modify fields according to your project.
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum von", name: "date_from", widget: "datetime" }
+      - { label: "Datum bis", name: "date_to", widget: "datetime" }
+      - { label: "Ort", name: "location", widget: "map" }
+  - name: "news" # Used in routes, e.g., /admin/collections/blog
+    label: "News" # Used in the UI
+    folder: "content/news" # The path to the folder where the markdown files are stored
+    create: true # Allow users to create new markdown files.
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields: # The fields for front matter. You will need to modify fields according to your project.
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Text", name: "text", widget: "text" }
+      - { label: "Datum", name: "date", widget: "datetime" }
