@@ -23,9 +23,11 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., title.md
     fields: # The fields for front matter. You will need to modify fields according to your project.
       - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Beschreibung", name: "description", widget: "text" }
       - { label: "Datum von", name: "date_from", widget: "datetime" }
       - { label: "Datum bis", name: "date_to", widget: "datetime" }
-      - { label: "Ort", name: "location", widget: "map" }
+      - { label: "Ort", name: "location", widget: "string" }
+      - { label: "Karte", name: "map", widget: "map", required: false }
   - name: "news" # Used in routes, e.g., /admin/collections/blog
     label: "News" # Used in the UI
     folder: "content/news" # The path to the folder where the markdown files are stored
