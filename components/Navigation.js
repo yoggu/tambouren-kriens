@@ -3,8 +3,15 @@ import Link from "next/link";
 
 const Navigation = () => {
   return (
-    <div>
-      <ul>
+    <div className="flex">
+      <div>
+        <Link href="/">
+          <a>
+            <img src="img/logo.png" />
+          </a>
+        </Link>
+      </div>
+      <ul className="flex justify-center items-center space-x-8 mx-auto">
         <li>
           <Link href="/">
             <a>Home</a>
