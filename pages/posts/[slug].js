@@ -11,7 +11,14 @@ const Post = ({ data, content }) => {
       <Head>
         <title>{data.title}</title>
       </Head>
-      <div className="prose" dangerouslySetInnerHTML={{ __html: content }} />
+      <div className="prose mx-auto">
+        <h1>{data.title}</h1>
+        <p>{data.date}</p>
+        <div className="w-full h-[500px] relative">
+          <img src={data.thumbnail} alt={data.title} />
+        </div>
+        <div dangerouslySetInnerHTML={{ __html: content }} />
+      </div>
     </>
   );
 };
@@ -37,9 +44,11 @@ export const getStaticProps = async ({ params: { slug } }) => {
     path.join("content", "posts", `${slug}.md`),
     "utf-8"
   );
-
   const mdParsed = matter(mdWithMetadata);
   const htmlString = marked(mdParsed.content);
+
+  mdParsed.data.date = mdParsed.data.date.toString();
+  console.log(mdParsed);
   return {
     props: {
       data: mdParsed.data,
