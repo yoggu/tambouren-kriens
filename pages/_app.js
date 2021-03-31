@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "../components/footer";
 import Navigation from "../components/navigation";
 import "../styles/globals.css";
 
@@ -11,9 +12,10 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-h-screen max-w-8xl mx-auto">
+      <div className="min-h-screen max-w-8xl mx-auto flex flex-col">
         <Navigation />
         <Component {...pageProps} />
+        <Footer />
       </div>
     </>
   );
