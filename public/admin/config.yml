@@ -13,7 +13,13 @@ collections:
     fields: # The fields for front matter. You will need to modify fields according to your project.
       - { label: "Titel", name: "title", widget: "string" }
       - { label: "Teaser Text", name: "teaser", widget: "string" }
-      - { label: "Datum", name: "date", widget: "datetime" }
+      - {
+          label: "Datum",
+          name: "date",
+          widget: "datetime",
+          date_format: "DD.MM.YYYY",
+          time_format: false,
+        }
       - { label: "Bild", name: "thumbnail", widget: "image" }
       - { label: "Author", name: "author", widget: "string", default: "Admin" }
       - { label: "Body", name: "body", widget: "markdown" }
