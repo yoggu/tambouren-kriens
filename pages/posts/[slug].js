@@ -14,7 +14,7 @@ const Post = ({ data, content }) => {
       <div className="prose mx-auto">
         <h1>{data.title}</h1>
         <p>{data.date}</p>
-        <div className="w-full h-[500px] relative">
+        <div className="w-full max-h-[500px] relative">
           <img src={data.thumbnail} alt={data.title} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: content }} />
