@@ -1,7 +1,7 @@
 ---
 title: 31. ZJTPF
 teaser: 31. Zentralschweizerische Tambouren- und Pfeiferwettspiele
-date: 2018-08-25
+date: 2018-08-25T10:00:00.000Z
 thumbnail: /img/IMG-20180929-WA0012-e1541345105169.jpg
 author: Emmanuel Bellwald
 ---
