@@ -1,7 +1,7 @@
 ---
 title: Fasnacht 2019
 teaser: Fasnacht 2019
-date: 2019-03-29
+date: 2019-03-29T00:00:00.000Z
 thumbnail: /img/Rädäpläm-2019.jpg
 author: Emmanuel Bellwald
 ---
