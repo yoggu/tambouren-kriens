@@ -46,7 +46,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const htmlString = marked(mdParsed.content);
 
   mdParsed.data.date = mdParsed.data.date.toString();
-  console.log(mdParsed);
+
   return {
     props: {
       data: mdParsed.data,

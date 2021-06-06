@@ -35,7 +35,7 @@ export const getStaticProps = async () => {
       path.join("content", "posts", post),
       "utf-8"
     );
-    console.log(mdPostContent);
+
     const mdParsed = matter(mdPostContent);
 
     mdParsed.data.date = mdParsed.data.date.toString();
