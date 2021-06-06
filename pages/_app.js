@@ -14,7 +14,9 @@ function MyApp({ Component, pageProps }) {
 
       <div className="min-h-screen max-w-8xl mx-auto flex flex-col">
         <Navigation />
-        <Component {...pageProps} />
+        <div className="w-full px-5 mx-auto">
+          <Component {...pageProps} />
+        </div>
         <Footer />
       </div>
     </>
