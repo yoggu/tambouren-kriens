@@ -6,6 +6,13 @@ import Head from "next/head";
 import marked from "marked";
 
 const Post = ({ data, content }) => {
+  const dateOptions = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+
   return (
     <>
       <Head>
@@ -13,7 +20,7 @@ const Post = ({ data, content }) => {
       </Head>
       <div className="prose mx-auto">
         <h1>{data.title}</h1>
-        <p>{data.date}</p>
+        <p>{new Date(data.date).toLocaleDateString("de-DE", dateOptions)}</p>
         <div className="w-full max-h-[500px] relative">
           <img src={data.thumbnail} alt={data.title} />
         </div>

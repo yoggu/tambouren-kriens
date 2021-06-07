@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 const Navigation = () => {
   const router = useRouter();
   return (
-    <div className="flex relative">
+    <nav className="flex relative max-w-8xl mx-auto w-full">
       <div className="p-5 absolute">
         <Link href="/">
           <a>
@@ -50,7 +50,7 @@ const Navigation = () => {
             </a>
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/events">
             <a
               className={
@@ -69,9 +69,9 @@ const Navigation = () => {
               Kontakt
             </a>
           </Link>
-        </li>
+        </li> */}
       </ul>
-    </div>
+    </nav>
   );
 };
 

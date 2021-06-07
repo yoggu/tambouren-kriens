@@ -28,7 +28,7 @@ const Home = ({ entries }) => {
   return (
     <>
       <div>
-        <img src="/img/front.jpg" />
+        <img className="max-h-[800px]" src="/img/front.jpg" />
       </div>
       <div className="flex flex-wrap -mx-4 mt-32 w-full box-border">
         {entries.slice(0, 4).map((entry) => (

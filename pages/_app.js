@@ -12,9 +12,9 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-h-screen max-w-8xl mx-auto flex flex-col">
+      <div className="min-h-screen flex flex-col">
         <Navigation />
-        <div className="w-full px-5 mx-auto">
+        <div className="max-w-8xl mx-auto w-full px-5">
           <Component {...pageProps} />
         </div>
         <Footer />

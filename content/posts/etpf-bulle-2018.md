@@ -2,7 +2,7 @@
 title: ETPF Bulle 2018
 teaser: Eidgenössisches Tambouren- und Pfeiferfest
 date: 2018-08-23T10:00:00.000Z
-thumbnail: /img/DSC00185.jpg
+thumbnail: /img/ueber-uns.jpg
 author: Emmanuel Bellwald
 ---
 
