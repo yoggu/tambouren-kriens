@@ -21,22 +21,20 @@ const Posts = ({ posts }) => {
             key={post.data.title}
             className="shadow hover:shadow-lg m-4 transition duration-300 ease-in-out transform hover:-translate-y-1 rounded w-[336px]"
           >
-            <Link href={"/" + post.link}>
-              <a className="block w-full h-full">
-                <img
-                  src={post.data.thumbnail}
-                  className="h-[225px] w-full object-cover"
-                />
-                <div className="p-4 pb-16">
-                  <h2 className="font-semibold text-xl">{post.data.title}</h2>
-                  <p className="text-gray-500">
-                    {new Date(post.data.date).toLocaleDateString(
-                      "de-DE",
-                      dateOptions
-                    )}
-                  </p>
-                </div>
-              </a>
+            <Link href={"/" + post.link} className="block w-full h-full">
+              <img
+                src={post.data.thumbnail}
+                className="h-[225px] w-full object-cover"
+              />
+              <div className="p-4 pb-16">
+                <h2 className="font-semibold text-xl">{post.data.title}</h2>
+                <p className="text-gray-500">
+                  {new Date(post.data.date).toLocaleDateString(
+                    "de-DE",
+                    dateOptions
+                  )}
+                </p>
+              </div>
             </Link>
           </div>
         ))}

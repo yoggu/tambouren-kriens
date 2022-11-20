@@ -8,68 +8,44 @@ const Navigation = () => {
     <nav className="flex relative max-w-8xl mx-auto w-full">
       <div className="p-5 absolute">
         <Link href="/">
-          <a>
-            <img src="/img/logo.png" />
-          </a>
+          <img src="/img/logo.png" />
         </Link>
       </div>
       <ul className="flex justify-center items-center space-x-8 p-5 mx-auto h-[100px]">
         <li>
-          <Link href="/">
-            <a className={router.pathname == "/" ? "text-green-600" : ""}>
-              Home
-            </a>
+          <Link
+            href="/"
+            className={router.pathname == "/" ? "text-green-600" : ""}
+          >
+            Home
           </Link>
         </li>
         <li>
-          <Link href="/about">
-            <a className={router.pathname == "/about" ? "text-green-600" : ""}>
-              Über uns
-            </a>
+          <Link
+            href="/about"
+            className={router.pathname == "/about" ? "text-green-600" : ""}
+          >
+            Über uns
           </Link>
         </li>
         <li>
-          <Link href="/education">
-            <a
-              className={
-                router.pathname == "/education" ? "text-green-600" : ""
-              }
-            >
-              Ausbildung
-            </a>
+          <Link
+            href="/education"
+            className={router.pathname == "/education" ? "text-green-600" : ""}
+          >
+            Ausbildung
           </Link>
         </li>
         <li>
-          <Link href="/posts">
-            <a
-              className={
-                router.pathname.startsWith("/posts") ? "text-green-600" : ""
-              }
-            >
-              Beiträge
-            </a>
+          <Link
+            href="/posts"
+            className={
+              router.pathname.startsWith("/posts") ? "text-green-600" : ""
+            }
+          >
+            Beiträge
           </Link>
         </li>
-        {/* <li>
-          <Link href="/events">
-            <a
-              className={
-                router.pathname.startsWith("/events") ? "text-green-600" : ""
-              }
-            >
-              Events
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/contact">
-            <a
-              className={router.pathname == "/contact" ? "text-green-600" : ""}
-            >
-              Kontakt
-            </a>
-          </Link>
-        </li> */}
       </ul>
     </nav>
   );
