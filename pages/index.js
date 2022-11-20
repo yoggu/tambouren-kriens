@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import marked, { options } from "marked";
+import { marked, options } from "marked";
 import Link from "next/link";
 
 const Home = ({ entries }) => {
@@ -73,7 +73,6 @@ export const getStaticProps = async () => {
     const mdParsed = matter(mdPostContent);
 
     mdParsed.data.date = mdParsed.data.date.toString();
-    console.log(mdParsed);
     return {
       content: marked(mdParsed.content),
       data: mdParsed.data,

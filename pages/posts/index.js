@@ -3,7 +3,7 @@ import fs from "fs";
 import Link from "next/link";
 import path from "path";
 import matter from "gray-matter";
-import marked, { options } from "marked";
+import { marked, options } from "marked";
 
 const Posts = ({ posts }) => {
   const dateOptions = {
@@ -57,7 +57,6 @@ export const getStaticProps = async () => {
     const mdParsed = matter(mdPostContent);
 
     mdParsed.data.date = mdParsed.data.date.toString();
-    console.log(mdParsed);
     return {
       content: marked(mdParsed.content),
       data: mdParsed.data,

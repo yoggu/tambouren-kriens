@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Head from "next/head";
-import marked from "marked";
+import { marked } from "marked";
 
 const Post = ({ data, content }) => {
   const dateOptions = {
